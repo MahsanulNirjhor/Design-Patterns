@@ -1,4 +1,4 @@
-public class CarBuilder implements Builder {
+public class CarSchemaBuilder implements Builder {
 
     private int id;
     private int height;
@@ -9,49 +9,49 @@ public class CarBuilder implements Builder {
     private int nbrOfDoors;
 
     @Override
-    public CarBuilder id(int id) {
+    public CarSchemaBuilder id(int id) {
         this.id = id;
         return this;
     }
 
     @Override
-    public CarBuilder brand(String brand) {
+    public CarSchemaBuilder brand(String brand) {
         this.brand = brand;
         return this;
     }
 
     @Override
-    public CarBuilder model(String model) {
+    public CarSchemaBuilder model(String model) {
         this.model = model;
         return this;
     }
 
     @Override
-    public CarBuilder color(String color) {
+    public CarSchemaBuilder color(String color) {
         this.color = color;
         return this;
     }
 
     @Override
-    public CarBuilder height(int height) {
+    public CarSchemaBuilder height(int height) {
         this.height = height;
         return this;
     }
 
     @Override
-    public CarBuilder engine(String engine) {
+    public CarSchemaBuilder engine(String engine) {
         this.engine = engine;
         return this;
     }
 
     @Override
-    public CarBuilder nbrOfDoors(int nbrOfDoors) {
+    public CarSchemaBuilder nbrOfDoors(int nbrOfDoors) {
         this.nbrOfDoors = nbrOfDoors;
         return this;
     }
 
-    public Car build() {
-        return new Car(id, brand, model, color, height, engine, nbrOfDoors);
+    public CarSchema build() {
+        return new CarSchema(id, brand, model, color, height, engine, nbrOfDoors);
     }
 
 }

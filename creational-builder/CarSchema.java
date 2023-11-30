@@ -1,4 +1,4 @@
-public class Car {
+public class CarSchema {
 
     private final int id;
     private final int height;
@@ -8,7 +8,7 @@ public class Car {
     private final String engine;
     private final int nbrOfDoors;
 
-    Car(int id, String brand, String model, String color, int height, String engine, int nbrOfDoors) {
+    CarSchema(int id, String brand, String model, String color, int height, String engine, int nbrOfDoors) {
         this.id = id;
         this.brand = brand;
         this.model = model;
@@ -21,7 +21,7 @@ public class Car {
     @Override
     public String toString() {
         return """
-                Car {
+                CarSchema {
                     id=%s,
                     height=%s,
                     brand=%s,

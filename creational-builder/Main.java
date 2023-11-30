@@ -1,14 +1,15 @@
-
 public class Main{
     public static void main(String [] args){
-        System.out.println("Hello World!!");
+        Director director = new Director();
 
         CarBuilder builder = new CarBuilder();
-        builder.id(2122)
-               .brand("Bugatti")
-               .model("Chiron")
-               .color("Blue");
-        Car car = builder.build();
-        System.out.println(car);
+        director.buildBugatti(builder);
+        builder.model("Chiron");
+        System.out.println(builder.build());
+
+        CarSchemaBuilder schemaBuilder = new CarSchemaBuilder();
+        director.buildLambo(schemaBuilder);
+        schemaBuilder.engine("90").nbrOfDoors(3);
+        System.out.println(schemaBuilder.build());
     }
 }
